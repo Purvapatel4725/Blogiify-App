@@ -34,7 +34,6 @@ const BlogController = {
             const newBlogPost = BlogPost({
                 "title": req.body.title,
                 "content": req.body.content,
-                // Add other fields as needed for your blog post schema
             });
             await newBlogPost.save();
             res.redirect('/blog');
@@ -72,7 +71,6 @@ const BlogController = {
             const updatedPostData = {
                 title: req.body.title,
                 content: req.body.content,
-                // Add other fields as needed for your blog post schema
             };
             await BlogPost.findByIdAndUpdate(postId, updatedPostData);
             res.redirect('/blog');
