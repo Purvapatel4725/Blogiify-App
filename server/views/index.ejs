@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include partials/header.ejs %>
+<% include partials/main_nav.ejs %>
+<main>
+  <div class="jumbotran jumbotran-fluid">
+    <div class="container">
+      <h1 class="display-4"> Welcome to the <%= title %></h1>
+    </div>
+  </div>
+</main>
+<% include partials/bottom_nav.ejs %>
+<% include partials/footer.ejs %>
