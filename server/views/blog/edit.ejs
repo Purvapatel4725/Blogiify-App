@@ -2,12 +2,12 @@
 <%- include ../partials/main_nav.ejs %>
 
 <!-- Content for the Edit page -->
-<div class="container">
+<div class="container p-5" ; color: white;">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <div class="card border-0 shadow">
                 <div class="card-body">
-                    <h1 class="h4 mb-3">Edit Blog Post</h1>
+                    <h1 class="h4 mb-3 text-center">Edit Blog</h1>
 
                     <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
                         <div class="mb-3">
@@ -30,10 +30,10 @@
                         </div>
 
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-block" type="submit">
-                                <i class="fas fa-edit"></i> Update Post</button>
+                            <button class="btn btn-primary btn-block" type="submit" style="background-color: #008080;">
+                                <i class="fas fa-edit"></i> Update</button>
                         
-                            <a href="/blog" class="btn btn-secondary btn-block mt-2"> 
+                            <a href="/blog" class="btn btn-secondary btn-block mt-2" style="background-color: #008080;"> 
                                 <i class="fas fa-undo"></i> Cancel</a> 
                         </div>
                     </form>
