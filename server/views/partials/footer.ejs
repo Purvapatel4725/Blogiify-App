@@ -1,5 +1,53 @@
 <footer>
-    <nav class="navbar navbar-dark p-1" style="background-color: #008080;">
-        <h6 class="navbar-text">&copy; 2023 by group 12</h6>
+    <nav class="navbar fixed-bottom navbar-dark p-1" style="background-color: #008080;">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <h6 class="navbar-text">&copy; 2023 by group 12</h6>
+            <div class="d-flex align-items-center">
+                <a href="https://github.com/Purvapatel4725/Web-ScriptGroupProject" target="_blank" class="mr-3 ml-3">
+                    <i class="fab fa-github" style="font-size: 24px; color: #fff;"></i>
+                </a>
+                <a href="#" onclick="toggleNamesPopup()" class="mr-3" style="margin-left: 8px;">
+                    <i class="fab fa-linkedin" style="font-size: 24px; color: #fff;"></i>
+                </a>
+                <div class="names-popup" id="namesPopup" style="display: none;">
+                    <a href="https://www.linkedin.com/in/purva-patel-78a10121b/" onclick="openLinkedIn('John')">Purva</a>
+                    <a href="#" onclick="openLinkedIn('Alice')">Purvam</a>
+                    <a href="#" onclick="openLinkedIn('Bob')">Chinmaya</a>
+                    <a href="#" onclick="openLinkedIn('Emma')">Saaketh</a>
+                    <a href="#" onclick="openLinkedIn('David')">Shalin</a>
+                </div>
+            </div>
+        </div>
     </nav>
 </footer>
+
+<script>
+    function toggleNamesPopup() {
+        const namesPopup = document.getElementById('namesPopup');
+        namesPopup.style.display = namesPopup.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function openLinkedIn(name) {
+        const linkedinProfiles = {
+            'Purva': 'https://www.linkedin.com/in/purva-patel-78a10121b/',
+            'Purvam': 'https://www.linkedin.com/in/aliceprofile/',
+            'Chinmaya': 'https://www.linkedin.com/in/bobprofile/',
+            'Saaketh': 'https://www.linkedin.com/in/emmaprofile/',
+            'Shalin': 'https://www.linkedin.com/in/davidprofile/'
+        };
+
+        if (linkedinProfiles[name]) {
+            window.open(linkedinProfiles[name], '_blank');
+        }
+    }
+</script>
+
+<style>
+    .names-popup a {
+        color: #fff;
+        padding-left: 5px;
+    }
+    .navbar-text{
+        color: #fff;
+    }
+</style>
