@@ -1,26 +1,35 @@
 <% include partials/header.ejs %>
 <% include partials/main_nav.ejs %>
-<header>
-  <h1>Blogify - Your Ultimate Blogging Platform</h1>
-</header>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3 text-center">
+      <h1><i class="fas fa-quote-left fa-shake"></i> Blogify <i class="fas fa-quote-right fa-shake"></i><br> Your Ultimate Blogging Platform</h1>
+    </div>
+  </div>
 
-<section>
-  <article>
-      <h2>Welcome to Blogify!</h2>
-      <p>Start sharing your thoughts and experiences with the world. Blogify provides you with a user-friendly platform to create, edit, delete and publish your own blogs on this website.</p>
-  </article>
+  <section class="mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <article>
+          <h2>Welcome to Blogify!</h2>
+          <p>Start sharing your thoughts and experiences with the world. Blogify provides you with a user-friendly platform to create, edit, delete, and publish your own blogs on this website.</p>
+        </article>
 
-  <article>
-      <h2>Key Features</h2>
-      <ul>
-          <li>Easy-to-use interface</li>
-          <li>Responsive design for any device</li>
-          <li>Customizable blog templates</li>
-          <li>Commenting and social sharing options</li>
-          <li>Secure and private blogging experience</li>
-      </ul>
-      <a href="/blog" class="btn btn-primary">Blogs</a>
-  </article>
-</section>
+        <article>
+          <h2>Key Features</h2>
+          <ul class="ListOfFeatures">
+            <li>Easy-to-use interface</li>
+            <li>Responsive design for any device</li>
+            <li>Customizable blog templates</li>
+            <li>Commenting and social sharing options</li>
+            <li>Secure and private blogging experience</li>
+          </ul>
+          <a href="/blog" class="btn btn-primary">Start Blogging</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
 <% include partials/bottom_nav.ejs %>
 <% include partials/footer.ejs %>

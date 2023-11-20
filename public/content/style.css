@@ -6,6 +6,9 @@ body {
   color: #000000;
 }
 
+.container{
+  color: #008080;
+}
 header {
   background-color: #008080;
   color: #000000;
@@ -36,4 +39,8 @@ article {
 article h2 {
   color: #008080;
   font-size: 35px;
+}
+
+.ListOfFeatures{
+  list-style-type: none;
 }
