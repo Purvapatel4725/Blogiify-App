@@ -1,5 +1,7 @@
 Group 12 - Final Project
 
+Chinmaya Ramani - 100872828
+
 References:
 
 Otto, M. (2022) Bootstrap, Getbootstrap.com. Available at: https://getbootstrap.com/
