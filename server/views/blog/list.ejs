@@ -1,18 +1,18 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 
-<main class="container"; color: white;">
+<main class="container"; color: #f4f4f4;">
     <div class="row">
         <div class="offset-md-2 col-md-8 text-center">
-            <h1 class="mb-4"><%= title %></h1>
+            <h1 class="mb-4 mt-3"><i class="fa-solid fa-comment-dots"></i> Your Feed</h1>
             
-            <a href="/blog/add" class="btn btn-primary" role="button" style="background-color: #008080;">
+            <a href="/blog/add" class="btn btn-primary mt-3" role="button" style="background-color: #008080;">
                 <i class="fa-solid fa-pen fa-shake"></i> Create Post
             </a> 
         </div>
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-4 p-5">
         <div class="offset-md-1 col-md-10">
             <% for(let count=0; count<blogPosts.length; count++) { %> 
                 <div class="card mb-3" style="border-radius: 15px; background-color: #fff; color: #000;">
