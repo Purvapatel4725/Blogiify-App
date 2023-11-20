@@ -1,11 +1,26 @@
 <% include partials/header.ejs %>
 <% include partials/main_nav.ejs %>
-<main>
-  <div class="jumbotran jumbotran-fluid">
-    <div class="container">
-      <h1 class="display-4"> Welcome to the <%= title %></h1>
-    </div>
-  </div>
-</main>
+<header>
+  <h1>Blogify - Your Ultimate Blogging Platform</h1>
+</header>
+
+<section>
+  <article>
+      <h2>Welcome to Blogify!</h2>
+      <p>Start sharing your thoughts and experiences with the world. Blogify provides you with a user-friendly platform to create, edit, delete and publish your own blogs on this website.</p>
+  </article>
+
+  <article>
+      <h2>Key Features</h2>
+      <ul>
+          <li>Easy-to-use interface</li>
+          <li>Responsive design for any device</li>
+          <li>Customizable blog templates</li>
+          <li>Commenting and social sharing options</li>
+          <li>Secure and private blogging experience</li>
+      </ul>
+      <a href="/blog" class="btn btn-primary">Blogs</a>
+  </article>
+</section>
 <% include partials/bottom_nav.ejs %>
 <% include partials/footer.ejs %>
