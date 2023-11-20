@@ -50,6 +50,9 @@ app.use(session({
 //initialize flash-connect
 app.use(flash());
 
+//implement user authentication
+passport.use(User.createStrategy());
+
 //serialize and deserialize user information
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
