@@ -1,3 +1,14 @@
+.custom-navbar {
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  background-color: #008080;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem; 
+}
+
+
 body {
   font-family: 'Times New Roman', serif;
   margin: 0;
