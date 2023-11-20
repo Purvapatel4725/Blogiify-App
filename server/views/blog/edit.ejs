@@ -1,49 +1,47 @@
 <%- include ../partials/header.ejs %>
-
 <%- include ../partials/main_nav.ejs %>
 
 <!-- Content for the Edit page -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <h1 class="h4 mb-3">Edit Blog Post</h1>
 
-            <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
-                <div class="form-group">
-                    <label for="titleTextField">Title</label>
-                    <input type="text" class="form-control"
-                    id="titleTextField"
-                    placeholder="Enter the Blog Post Title"
-                    name="title" 
-                    value="<%= Blog.title %>"
-                    required>
+                    <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
+                        <div class="mb-3">
+                            <label for="titleTextField" class="form-label">Title</label>
+                            <input type="text" class="form-control"
+                            id="titleTextField"
+                            placeholder="Enter the Blog Post Title"
+                            name="title" 
+                            value="<%= Blog.title %>"
+                            required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contentTextArea" class="form-label">Content</label>
+                            <textarea class="form-control" rows="5"
+                            id="contentTextArea"
+                            placeholder="Enter the Content of the Blog Post"
+                            name="content" 
+                            required><%= Blog.content %></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-block" type="submit">
+                                <i class="fas fa-edit"></i> Update Post</button>
+                        
+                            <a href="/blog" class="btn btn-secondary btn-block mt-2"> 
+                                <i class="fas fa-undo"></i> Cancel</a> 
+                        </div>
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <label for="contentTextArea">Content</label>
-                    <textarea type="text" class="form-control"
-                    id="contentTextArea"
-                    placeholder="Enter the Content of the Blog Post"
-                    name="content" 
-                    required>
-                    <%= Blog.content %>
-                    </textarea>
-                </div>
-
-                
-
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
-                
-                <a href="/blog" class="btn btn-warning"> 
-                    <i class="fas fa-undo"></i> Cancel</a> 
-
-            </form>
+            </div>
         </div>
-
     </div>
 </div>
 
 <%- include ../partials/bottom_nav.ejs %>  
-
 <%- include ../partials/footer.ejs %>

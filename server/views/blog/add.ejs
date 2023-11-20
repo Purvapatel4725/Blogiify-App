@@ -2,43 +2,69 @@
 
 <%- include ../partials/main_nav.ejs %>
 
-<!-- Content for the Add page -->
+<!-- Content for the Edit page -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
 
-            <form class="form" method="POST" action="/blog/add"> 
+            <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>">
                 <div class="form-group">
                     <label for="titleTextField">Title</label>
-                    <input type="text" class="form-control"
-                    id="titleTextField"
-                    placeholder="Enter the Blog Post Title"
-                    name="title" required>
+                    <input type="text" class="form-control twitter-style-input"
+                        id="titleTextField"
+                        placeholder="Enter the Blog Post Title"
+                        name="title"
+                        value="<%= Blog.title %>"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="contentTextArea">Content</label>
-                    <textarea type="text" class="form-control"
-                    id="contentTextArea"
-                    placeholder="Enter the Content of the Blog Post"
-                    name="content" required></textarea>
+                    <textarea class="form-control twitter-style-textarea"
+                        id="contentTextArea"
+                        placeholder="Enter the Content of the Blog Post"
+                        name="content"
+                        required><%= Blog.content %></textarea>
                 </div>
 
-               
-
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
-                
-                <a href="/blog" class="btn btn-warning"> 
-                    <i class="fas fa-undo"></i> Cancel</a> 
+                <div class="button-group">
+                    <button class="btn btn-primary twitter-style-btn" type="submit">
+                        <i class="fas fa-edit"></i> Update</button>
+                    <a href="/blog" class="btn btn-warning twitter-style-btn">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                </div>
 
             </form>
         </div>
-
     </div>
 </div>
+<style>
+/* Twitter-style form input */
+.twitter-style-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+}
 
-<%- include ../partials/bottom_nav.ejs %>  
+/* Twitter-style form textarea */
+.twitter-style-textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    height: 150px; /* You can adjust the height as needed */
+    margin-bottom: 15px;
+}
+
+/* Twitter-style form buttons */
+.twitter-style-btn {
+    margin-right: 10px;
+}
+</style>
+
+<%- include ../partials/bottom_nav.ejs %>
 
 <%- include ../partials/footer.ejs %>
