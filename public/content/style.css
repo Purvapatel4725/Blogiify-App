@@ -58,3 +58,18 @@ article h2 {
 .ListOfFeatures{
   list-style-type: none;
 }
+
+main.container {
+  color: #008080;
+}
+
+.btn-primary {
+  background-color: #008080;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #fff;
+  color: #000;
+}

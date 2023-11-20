@@ -1,12 +1,12 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 
-<main class="container" style="color: #008080;">
+<main class="container">
     <div class="row">
         <div class="offset-md-2 col-md-8 text-center">
             <h1 class="mb-4 mt-3"><i class="fa-solid fa-comment-dots"></i> Your Blogs</h1>
             
-            <a href="/blog/add" class="btn btn-primary mt-3" role="button" style="background-color: #008080;">
+            <a href="/blog/add" class="btn btn-primary mt-3" role="button">
                 <i class="fa-solid fa-pen fa-shake"></i> Add Blog
             </a> 
         </div>
@@ -15,14 +15,14 @@
     <div class="row mt-1 p-5">
         <div class="offset-md-1 col-md-10">
             <% for(let count=0; count<blogPosts.length; count++) { %> 
-                <div class="card mb-3" style="border-radius: 15px; background-color: #fff; color: #000;">
+                <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title"><%= blogPosts[count].title %></h5>
                         <p class="card-text"><%= blogPosts[count].content %></p>
-                        <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm" style="background-color: #008080;">
+                        <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit
                         </a>
-                        <button onclick="confirmDelete('<%= blogPosts[count]._id %>')" class="btn btn-danger btn-sm" style="background-color: #dc3545;">
+                        <button onclick="confirmDelete('<%= blogPosts[count]._id %>')" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i> Delete
                         </button>
                     </div>
