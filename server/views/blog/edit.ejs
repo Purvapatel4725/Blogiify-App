@@ -7,11 +7,11 @@
         <div class="offset-md-3 col-md-6">
             <div class="card border-0 shadow">
                 <div class="card-body">
-                    <h1 class="h4 mb-3 text-center">Edit Blog</h1>
+                    <h1 class="h4 mb-3 text-center"><strong>Edit Blog</strong></h1>
 
                     <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
                         <div class="mb-3">
-                            <label for="titleTextField" class="form-label">Title</label>
+                            <label for="titleTextField" class="form-label"><strong>Title</strong></label>
                             <input type="text" class="form-control"
                             id="titleTextField"
                             placeholder="Enter the Blog Post Title"
@@ -21,7 +21,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="contentTextArea" class="form-label">Content</label>
+                            <label for="contentTextArea" class="form-label"><strong>Content</strong></label>
                             <textarea class="form-control" rows="5"
                             id="contentTextArea"
                             placeholder="Enter the Content of the Blog Post"
