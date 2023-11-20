@@ -15,6 +15,10 @@ let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash') ;
 
+//User Model Setup
+let userModel = require('../models/user');
+let User = userModel.User;
+
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
@@ -45,6 +49,11 @@ app.use(session({
 
 //initialize flash-connect
 app.use(flash());
+
+//serialize and deserialize user information
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 //initialize the passport
 app.use(passport.initialize());
 app.use(passport.session());
