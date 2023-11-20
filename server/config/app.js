@@ -9,6 +9,12 @@ var usersRouter = require('../routes/users');
 let blogRouter = require('../routes/blogRoutes');
 var app = express();
 
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash') ;
+
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
@@ -29,6 +35,19 @@ let DB = require('./db');
 mongoose.connect(DB.URI);
 mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',() => {console.log("Mongo DB is connected")});
+
+//Set-up Express-Session
+app.use(session({
+  secret:"SomeSecret",
+  saveUninitialized:false,
+  resave:false
+}));
+
+//initialize flash-connect
+app.use(flash());
+//initialize the passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.use('/', indexRouter);
