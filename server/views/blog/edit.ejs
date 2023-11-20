@@ -5,13 +5,13 @@
 <div class="container p-5" ; color: white;">
     <div class="row">
         <div class="offset-md-3 col-md-6">
-            <div class="card border-0 shadow" style="height: 540px;">
+            <div class="card border-0 shadow">
                 <div class="card-body">
-                    <h1 class="h4 mb-3 text-center"><strong>Edit Blog</strong></h1>
+                    <h1 class="h4 mb-3 text-center">Edit Blog</h1>
 
                     <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
                         <div class="mb-3">
-                            <label for="titleTextField" class="form-label"><strong>Title</strong></label>
+                            <label for="titleTextField" class="form-label">Title</label>
                             <input type="text" class="form-control"
                             id="titleTextField"
                             placeholder="Enter the Blog Post Title"
@@ -21,14 +21,14 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="contentTextArea" class="form-label"><strong>Content</strong></label>
-                            <textarea class="form-control" rows="7"
+                            <label for="contentTextArea" class="form-label">Content</label>
+                            <textarea class="form-control" rows="5"
                             id="contentTextArea"
                             placeholder="Enter the Content of the Blog Post"
                             name="content" 
                             required><%= Blog.content %></textarea>
                         </div>
-                        <br>
+
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-block" type="submit" style="background-color: #008080;">
                                 <i class="fas fa-edit"></i> Update</button>
