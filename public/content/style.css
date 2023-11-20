@@ -9,6 +9,7 @@ body {
 .container{
   color: #008080;
 }
+
 header {
   background-color: #008080;
   color: #000000;
@@ -26,7 +27,7 @@ h1 {
 section {
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -40,6 +41,7 @@ article h2 {
   color: #008080;
   font-size: 35px;
 }
+
 
 .ListOfFeatures{
   list-style-type: none;

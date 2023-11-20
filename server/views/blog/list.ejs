@@ -2,39 +2,44 @@
 <%- include ../partials/main_nav.ejs %>
 <main class="container">
     <div class="row">
+        <div class="offset-md-2 col-md-8 text-center">
+            <h1 class="mb-4"><%= title %></h1>
+            
+            <a href="/blog/add" class="btn btn-primary" role="button">
+                <i class="fa-solid fa-pen fa-shake"></i> Create Post
+            </a> 
+        </div>
+    </div>
+
+    <div class="row mt-4">
         <div class="offset-md-1 col-md-10">
-            <h1><%= title %> </h1> 
-
-            <a href="/blog/add" class="btn btn-primary" 
-            role="button"><i class="fas fa-plus-circle"></i> Add Blog Post</a> 
-
-            <br>
-            <table class="table table-bordered table-striped table-hover">
-                <tr class="d-flex">
-                    <th class="text-center col-2">Title</th>
-                    <th class="text-center col-4">Content</th> 
-                </tr>
-                <% for(let count=0;count<blogPosts.length;count++) { %> 
-                <tr class="d-flex">
-                    <td class="text-center col-2"><%= blogPosts[count].title %></td> 
-                    <td class="text-center col-4"><%= blogPosts[count].content %></td> 
-                    <td class="text-center col-1">
-                        <a href="/blog/edit/<%= blogPosts[count]._id %>" 
-                            class="btn btn-primary btn-sm">
+            <% for(let count=0; count<blogPosts.length; count++) { %> 
+                <div class="card mb-3" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= blogPosts[count].title %></h5>
+                        <p class="card-text"><%= blogPosts[count].content %></p>
+                        <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit
                         </a>
-                    </td>
-                    <td class="text-center col-1">
-                        <a href="/blog/delete/<%= blogPosts[count]._id %>" 
-                            class="btn btn-danger btn-sm">
+                        <button onclick="confirmDelete('<%= blogPosts[count]._id %>')" class="btn btn-danger btn-sm">
                             <i class="fas trash-alt"></i> Delete
-                        </a>
-                    </td>
-                </tr>
-                <% } %>
-            </table>
+                        </button>
+                    </div>
+                </div>
+            <% } %>
         </div>
     </div>
 </main>
+
+
+<script>
+    function confirmDelete(blogPostId) {
+        var isConfirmed = confirm('Are you sure you want to delete this blog post?');
+        if (isConfirmed) {
+            window.location.href = '/blog/delete/' + blogPostId;
+        }
+    }
+</script>
+
 <%- include ../partials/bottom_nav.ejs %>
 <%- include ../partials/footer.ejs %>
