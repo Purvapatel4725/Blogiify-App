@@ -22,6 +22,7 @@
     "jquery": "^3.7.1",
     "connect-flash": "^0.1.1",
     "express-session": "^1.17.3",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
