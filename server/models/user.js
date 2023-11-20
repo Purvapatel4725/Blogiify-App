@@ -26,6 +26,13 @@ let User = mongoose.Schema({
         trim:true,
         required:'Display Name is required'
    },
+    email:
+   {
+        type:email,
+        default:"",
+        trim:true,
+        required:'Email is required'
+   },
    created:
    {
         type:Date,
