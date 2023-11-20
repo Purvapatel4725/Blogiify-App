@@ -61,6 +61,37 @@ router.get('/register', function(req,res,next){
   }
 })
 
+router.post('/register', function(req,res,net){
+ let newUser = new User({
+  username: req.body.username,
+  //password:req.body.password,
+  email: req.body.email,
+  displayName: req.body.displayName
+ })
+ User.register(newUser, req,body.password,(err) => {
+  if(err)
+  {
+    console.log("Error in inserting new user");
+    if(err.name =="UserExistError")
+    {
+      req.flash('registerMessage',
+      'Registration Error: User already exist')
+    }
+    return res.render('auth/register',
+    {
+      title:'Register',
+      message: req.flash('registerMessage'),
+      displayName: req.user ? req.user.displayName: ''
+    })
+  }
+  else{
+    return passport.authenticate('local')(req,res,()=>{
+      res.redirect('/blog');
+    })
+  }
+ })
+})
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
