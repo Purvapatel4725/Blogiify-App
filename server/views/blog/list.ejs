@@ -21,12 +21,16 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= blogPosts[count].title %></h5>
                         <p class="card-text"><%= blogPosts[count].content %></p>
-                        <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit
-                        </a>
-                        <button onclick="confirmDelete('<%= blogPosts[count]._id %>')" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Delete
-                        </button>
+                        
+                        <% if(typeof displayName=='string' && displayName) { %>
+                            <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                            
+                            <a onclick="confirmDelete('<%= blogPosts[count]._id %>')" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                         <% } else { } %>
                     </div>
                 </div>
             <% } %>
