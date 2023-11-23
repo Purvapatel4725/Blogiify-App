@@ -1,0 +1,55 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<main class="container">
+    <!--Message Area-->
+    <% if (message.lenth > 0) { %>
+    <div class="alert alter-danger">
+        <%= message %>
+    </div>
+    <% } %>
+
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <h1>Please Register</h1>
+            <form method="post" autocomplete="off">
+                <fieldset class="form-group">
+                    <label for="username"></label>
+                    <input type="text" class="form-control"
+                    name="username" 
+                    placeholder="Enter username"
+                    id="username" required autofocus>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="password"></label>
+                    <input type="password" class="form-control"
+                    name="password" 
+                    placeholder="Enter password"
+                    id="password" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="email"></label>
+                    <input type="email" class="form-control"
+                    name="email" 
+                    placeholder="Enter Email Address"
+                    id="email" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="displayName"></label>
+                    <input type="text" class="form-control"
+                    name="displayName" 
+                    placeholder="Enter display name"
+                    id="displayName" required>
+                </fieldset>
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success"
+                    value="Register">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

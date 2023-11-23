@@ -6,9 +6,11 @@
         <div class="offset-md-2 col-md-8 text-center">
             <h1 class="mb-4 mt-3"><i class="fa-solid fa-comment-dots"></i> Your Blogs</h1>
             
+            <% if(typeof displayName=='string' && displayName) { %>
             <a href="/blog/add" class="btn btn-primary mt-3" role="button">
                 <i class="fa-solid fa-pen fa-shake"></i> Add Blog
             </a> 
+             <% } %>
         </div>
     </div>
 

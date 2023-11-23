@@ -1,6 +1,9 @@
 Group 12 - Final Project
 
+Purvam Patel - 100863366
+
 Chinmaya Ramani - 100872828
+
 Saaketh Potluri - 100876538
 
 References:
