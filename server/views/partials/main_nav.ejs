@@ -1,44 +1,48 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <div class="container-fluid">
-      <img id="logoImage" src="../assets/images/navbarlogo.png" alt="Your Image Alt Text" class="navbar-logo" style="max-width: 130px; margin-top: 2px; filter: brightness(0) invert(1);">
+    <a href="/"><img id="logoImage" src="../assets/images/navbarlogo.png" alt="Your Image Alt Text" class="navbar-logo"
+        style="height: 2.5rem; max-width: 130px; margin-top: 2px; filter: brightness(0) invert(1);"></a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <% if(title == "Home") { %>
-              <a class="nav-link active" href="/home">
-            <% } else { %>
-              <a class="nav-link" href="/home">
-            <% } %>
-              <i class="fa-solid fa-lg fa-house-laptop"></i> Home</a>
-          </li>
-          <li class="nav-item">
-            <% if(title == "about") { %>
-              <a class="nav-link active" href="/about">
-            <% } else { %>
-              <a class="nav-link" href="/about">
-            <% } %>
-              <i class="fa-solid fa-address-card"></i> About</a>
-          </li>
-          <% if(typeof displayName == 'string' && displayName) { %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <% if(title=="Home" ) { %>
+            <a class="nav-link active" href="/">
+              <% } else { %>
+                <a class="nav-link" href="/">
+                  <% } %>
+                    <i class="fa-solid fa-lg fa-house-laptop"></i> Home
+                </a>
+        </li>
+        <li class="nav-item">
+          <% if(title=="about" ) { %>
+            <a class="nav-link active" href="/about">
+              <% } else { %>
+                <a class="nav-link" href="/about">
+                  <% } %>
+                    <i class="fa-solid fa-address-card"></i> About
+                </a>
+        </li>
+   <!--     <% if(typeof displayName=='string' && displayName) { %>
           <li class="navbar-text">
             <i class="fas fa-lg fa-user"></i>
             Welcome, <%= displayName %>
           </li>
           <li class="nav-item">
-              <a href="/logout" class="nav-link" >
+            <a href="/logout" class="nav-link">
               <i class="fa-solid fa-sign-out-alt"></i> Logout</a>
           </li>
           <% } else { %>
             <li class="nav-item">
               <a href="/login" class="nav-link">
-              <i class="fa-solid fa-sign-in-alt"></i> Login</a>
-          </li>
-          <% } %>
-        </ul>
-      </div>
+                <i class="fa-solid fa-sign-in-alt"></i> Login</a>
+            </li>
+            <% } %> -->
+      </ul>
+    </div>
   </div>
-</nav> 
+</nav>

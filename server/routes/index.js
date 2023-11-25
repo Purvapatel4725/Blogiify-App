@@ -21,6 +21,13 @@ router.get('/logout', loginController.GetLogout)
 
 
 /* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { 
+    title: 'Home' , 
+    displayName: req.user ? req.user.displayName:''
+  });
+});
+
 router.get('/home', function(req, res, next) {
   res.render('index', { 
     title: 'Home' , 
