@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <div class="container-fluid">
-      <a class="navbar-brand" href="/"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+      <img id="logoImage" src="../assets/images/navbarlogo.png" alt="Your Image Alt Text" class="navbar-logo" style="max-width: 130px; margin-top: 2px; filter: brightness(0) invert(1);">
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,12 +8,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <% if(title == "About Us") { %>
-              <a class="nav-link active" 
+            <% if(title == "Home") { %>
+              <a class="nav-link active" href="/home">
             <% } else { %>
-              <a class="nav-link"
+              <a class="nav-link" href="/home">
             <% } %>
-              href="/about"> <i class="fa-solid fa-address-card"></i> About</a>
+              <i class="fa-solid fa-lg fa-house-laptop"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <% if(title == "about") { %>
+              <a class="nav-link active" href="/about">
+            <% } else { %>
+              <a class="nav-link" href="/about">
+            <% } %>
+              <i class="fa-solid fa-address-card"></i> About</a>
           </li>
           <% if(typeof displayName == 'string' && displayName) { %>
           <li class="navbar-text">
