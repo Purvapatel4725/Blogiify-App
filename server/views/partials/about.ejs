@@ -1,0 +1,94 @@
+<% include header.ejs %>
+<% include main_nav.ejs %>
+
+<section id="about">
+<div class="container">
+        <article>
+        
+        <style>
+        .profile-container {
+          display: flex;
+          justify-content: space-around;
+          margin: 20px;
+        }
+
+        .profile {
+          padding:30px;
+          text-align:center;
+          cursor: pointer;
+        }
+
+        .description {
+            display: none;
+            max-width:800px;
+        }
+        
+        h4 {
+            text-align: center;
+          }
+
+         </style>
+
+        <h2>About Us</h2>
+
+        <div class="profile-container">
+        <div class="profile" onclick="toggleDescription('profile1')">
+        <img src="/assets/images/purvapic.jpg" alt="Purva" width="200" height="250">
+        <br>
+        <h4> Purva Patel</h4>
+        <p class="description" id="profile1-description">I am Purva Patel, a motivated Networking and IT Security student at Ontario Tech University with a keen interest in the intersection of business and technology. I possess strong Python programming and networking skills, excellent problem-solving abilities, and I am a skilled communicator and collaborator. I am eager to make a positive impact in the dynamic fields of Cybersecurity and business.</p>
+        </div>
+
+        <div class="profile" onclick="toggleDescription('profile2')">
+        <img src="/assets/images/purvampic.jpg" alt="Purvam" width="200" height="250">
+        <br>
+        <h4> Purvam Patel</h4>
+        <p class="description" id="profile2-description">I am Purvam Patel, a dedicated student currently pursuing my specialization in Networking and IT Security at Ontario Tech University. 
+        I am deeply passionate about the intersection of business and technology.</p>
+        </div>
+
+        <div class="profile" onclick="toggleDescription('profile3')">
+        <img src="/assets/images/chinmayapic.jpg" alt="Chinmaya" width="180" height="250">
+        <br>
+        <h4>Chinmaya Ramani</h4>
+        <p class="description" id="profile3-description">I'm Chinmaya Ramani and currently a second-year student at Ontario Tech University, where I'm enthusiastically pursuing a degree in Tech Management (IT). 
+        What truly fuels my passion is the world of technology and my insatiable thirst for knowledge. 
+        I absolutely love diving into programming and finding ways to make things work better. 
+        One course that's really caught my attention is Web and Script Programming. 
+        It's incredible how you can use code to create dynamic websites and automate tasks. 
+        Beyond the classroom, I'm always on the lookout for opportunities to put my programming skills to the test, whether it's working on personal projects or contributing to open-source projects. 
+        I'm genuinely excited about the endless possibilities that the tech industry offers and I can't wait to make my mark in this field. 
+        It's a journey I'm fully committed to, and I'm eager to see where it takes me!</p>
+        </div>
+
+        <div class="profile" onclick="toggleDescription('profile4')">
+        <img src="/assets/images/saakethpic.jpg" alt="Saaketh" width="250" height="250">
+        <br>
+        <h4>Saaketh Potluri</h4>
+        <p class="description" id="profile4-description">I am Saaketh Potluri,a second-year student majoring in Technology Management at Ontario Tech University. I have a passion for coding and enjoy tackling challenging projects. Whether it's solving complex coding problems or developing innovative software, I'm always up for the challenge. 
+        In addition to coding, I am a sports enthusiast. I follow soccer and Formula 1 closely, and you can often find me discussing the latest match results or race updates with fellow fans.
+        I am eager to make new friends and contribute to the tech industry.</p>
+        </div>
+
+  </div>
+
+  <script>
+    function toggleDescription(profileId) {
+      var description = document.getElementById(profileId + "-description");
+
+      if (description.style.display === "none") {
+        description.style.display = "block";
+      } else {
+        description.style.display = "none";
+      }
+    }
+  </script>
+
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% include bottom_nav.ejs %>
+<% include footer.ejs %>
