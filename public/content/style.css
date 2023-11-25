@@ -35,12 +35,21 @@ h1 {
   font-weight: bold;
 }
 
-section {
+#home{
   max-width: 400px;
   margin: 20px auto;
   padding: 30px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about{
+  background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:0px;
+  padding: 30px;
+  height: 100vh;
 }
 
 article {
