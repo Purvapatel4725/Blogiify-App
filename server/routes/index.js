@@ -21,7 +21,7 @@ router.get('/logout', loginController.GetLogout)
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/home', function(req, res, next) {
   res.render('index', { 
     title: 'Home' , 
     displayName: req.user ? req.user.displayName:''
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { 
+  res.render('partials/about', { 
     title: 'About Us',
     displayName: req.user ? req.user.displayName:''  
   });
