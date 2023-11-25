@@ -23,3 +23,4 @@ Font Awesome 5 (2017) Font Awesome 5, Fontawesome.com. Font Awesome 5. Available
 Bootstrap 5 Navigation Bars (no date) www.w3schools.com. Available at: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php
 
 Logo Maker & Brand Builder | Logo.com. (n.d.). Logo.com. https://logo.com/
+Logo Maker & Brand Builder for Navigation bar | Canva.com. Available at: https://www.canva.com/
