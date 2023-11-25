@@ -8,6 +8,8 @@ Chinmaya Ramani - 100872828
 
 Saaketh Potluri - 100876538
 
+Shalin Vaidya - 100888421
+
 References:
 
 Otto, M. (2022) Bootstrap, Getbootstrap.com. Available at: https://getbootstrap.com/
