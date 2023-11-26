@@ -5,7 +5,7 @@ const BlogController = {
         try {
             const blogPosts = await BlogPost.find();
             res.render('blog/list', {
-                title: 'Blog Post List',
+                title: 'Blogs',
                 blogPosts: blogPosts,
                 displayName: req.user ? req.user.displayName:''
             });
@@ -20,7 +20,7 @@ const BlogController = {
     AddBlogPost: async (req, res, next) => {
         try {
             res.render('blog/add', {
-                title: 'Add Blog Post',
+                title: 'Add Blog',
                 displayName: req.user ? req.user.displayName:''
             });
         } catch (err) {
@@ -56,7 +56,7 @@ const BlogController = {
                 return;
             }
             res.render('blog/edit', {
-                title: 'Edit Blog Post',
+                title: 'Edit Blog',
                 Blog: blogPost,
                 displayName: req.user ? req.user.displayName:''
             });

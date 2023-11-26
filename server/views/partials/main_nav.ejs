@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <div class="container-fluid">
-    <a href="/"><img id="logoImage" src="../assets/images/navbarlogo.png" alt="Your Image Alt Text" class="navbar-logo"
+    <a href="/"><img id="logoImage" src="../assets/images/navbarlogo.png" alt="Blogiify Logo" class="navbar-logo"
         style="height: 2.5rem; max-width: 130px; margin-top: 2px; filter: brightness(0) invert(1);"></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -15,7 +15,7 @@
               <% } else { %>
                 <a class="nav-link" href="/">
                   <% } %>
-                    <i class="fa-solid fa-lg fa-house-laptop"></i> Home
+                    <i class="fa-solid fa-lg fa-house"></i> Home
                 </a>
         </li>
         <li class="nav-item">
@@ -24,10 +24,19 @@
               <% } else { %>
                 <a class="nav-link" href="/about">
                   <% } %>
-                    <i class="fa-solid fa-address-card"></i> About
+                    <i class="fa-solid fa-lg fa-address-card"></i> About
                 </a>
         </li>
-   <!--     <% if(typeof displayName=='string' && displayName) { %>
+        <li class="nav-item">
+          <% if(title=="Blogs" ) { %>
+            <a class="nav-link active" href="/blog">
+              <% } else { %>
+                <a class="nav-link" href="/blog">
+                  <% } %>
+                    <i class="fa-solid fa-rss fa-lg"></i> Blogs
+                </a>
+        </li>
+        <% if(typeof displayName=='string' && displayName) { %>
           <li class="navbar-text">
             <i class="fas fa-lg fa-user"></i>
             Welcome, <%= displayName %>
@@ -41,7 +50,7 @@
               <a href="/login" class="nav-link">
                 <i class="fa-solid fa-sign-in-alt"></i> Login</a>
             </li>
-            <% } %> -->
+            <% } %>
       </ul>
     </div>
   </div>
