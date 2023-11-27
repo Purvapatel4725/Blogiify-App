@@ -1,4 +1,4 @@
-Group 12 - Final Project
+# Group 12 - Final Project
 
 Purva Patel - 100886734
 
@@ -10,7 +10,7 @@ Saaketh Potluri - 100876538
 
 Shalin Vaidya - 100888421
 
-References:
+# References:
 
 Otto, M. (2022) Bootstrap, Getbootstrap.com. Available at: https://getbootstrap.com/
 
