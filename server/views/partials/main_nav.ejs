@@ -46,15 +46,17 @@
             </li>
             <% } %>
       </ul>
-      <ul class="navbar-nav ms-auto">
-        <li class="navbar-text">
-          <% if(typeof displayName=='string' && displayName) { %>
-            <i class="fa-solid fa-user fa-bounce"></i> Welcome, <%= displayName %>
-          <% } %>
-        </li>
-      </ul>
+      
     </div>
+    <ul class="navbar-nav ms-auto">
+      <li class="navbar-text">
+        <% if(typeof displayName=='string' && displayName) { %>
+          <i class="fa-solid fa-user fa-bounce"></i> Welcome, <%= displayName %>
+        <% } %>
+      </li>
+    </ul>
   </div>
+  
 </nav>
 
 <style>
