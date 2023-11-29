@@ -1,93 +1,308 @@
-<% include header.ejs %>
-<% include main_nav.ejs %>
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
 
-<section id="about">
 <div class="container">
-        <article>
-        
-        <style>
-        .profile-container {
-          display: flex;
-          justify-content: space-around;
-          margin: 20px;
-        }
-
-        .profile {
-          padding:30px;
-          text-align:center;
-          cursor: pointer;
-        }
-
-        .description {
-            display: none;
-            max-width:800px;
-        }
-        
-        h4 {
-            text-align: center;
-          }
-
-         </style>
-
-        <h2>About Us</h2>
-
-        <div class="profile-container">
-        <div class="profile" onclick="toggleDescription('profile1')">
-        <img src="/assets/images/purvapic.jpg" alt="Purva" width="200" height="250">
-        <br>
-        <h4> Purva Patel</h4>
-        <p class="description" id="profile1-description">I am Purva Patel, a motivated Networking and IT Security student at Ontario Tech University with a keen interest in the intersection of business and technology. I possess strong Python programming and networking skills, excellent problem-solving abilities, and I am a skilled communicator and collaborator. I am eager to make a positive impact in the dynamic fields of Cybersecurity and business.</p>
-        </div>
-
-        <div class="profile" onclick="toggleDescription('profile2')">
-        <img src="/assets/images/purvampic.jpg" alt="Purvam" width="200" height="250">
-        <br>
-        <h4> Purvam Patel</h4>
-        <p class="description" id="profile2-description">I am Purvam Patel, a dedicated student currently pursuing my specialization in Networking and IT Security at Ontario Tech University. 
-        I am deeply passionate about the intersection of business and technology.</p>
-        </div>
-
-        <div class="profile" onclick="toggleDescription('profile3')">
-        <img src="/assets/images/chinmayapic.jpg" alt="Chinmaya" width="180" height="250">
-        <br>
-        <h4>Chinmaya Ramani</h4>
-        <p class="description" id="profile3-description">I'm Chinmaya Ramani, a second-year Tech Management (IT) student at Ontario Tech University. 
-        My passion lies in the world of technology, and I thrive on continuous learning. 
-        I enjoy delving into programming to enhance functionality. 
-        Web and Script Programming has particularly captivated me for its ability to create dynamic websites and automate tasks. 
-        Outside the classroom, I actively seek opportunities to apply my programming skills, be it through personal projects or contributions to open-source initiatives. 
-        The boundless potential of the tech industry excites me, and I'm eager to leave my mark. 
-        This journey is my full commitment, and I can't wait to see where it leads!</p>
-        </div>
-
-        <div class="profile" onclick="toggleDescription('profile4')">
-        <img src="/assets/images/saakethpic.jpg" alt="Saaketh" width="250" height="250">
-        <br>
-        <h4>Saaketh Potluri</h4>
-        <p class="description" id="profile4-description">I am Saaketh Potluri,a second-year student majoring in Technology Management at Ontario Tech University. I have a passion for coding and enjoy tackling challenging projects. Whether it's solving complex coding problems or developing innovative software, I'm always up for the challenge. 
-        In addition to coding, I am a sports enthusiast. I follow soccer and Formula 1 closely, and you can often find me discussing the latest match results or race updates with fellow fans.
-        I am eager to make new friends and contribute to the tech industry.</p>
-        </div>
-
+  <div class="section-title">
+      <h1>Meet the team</h1>
   </div>
-
-  <script>
-    function toggleDescription(profileId) {
-      var description = document.getElementById(profileId + "-description");
-
-      if (description.style.display === "none") {
-        description.style.display = "block";
-      } else {
-        description.style.display = "none";
-      }
-    }
-  </script>
-
-        </article>
+  <div class="row">
+      <div class="column">
+          <div class="team-1">
+              <div class="team-img">
+                  <img src="assets/images/purvapic.jpg" alt="Team Image">
+              </div>
+              <div class="team-content">
+                  <h2>Purva Patel</h2>
+                  <h3>Networking and IT Security</h3>
+                  <p>
+                    Motivated Networking & IT Security student at Ontario Tech, adept in Python, networking, problem-solving, communication, eager to impact Cybersecurity and business.</p>
+                  <h4>purvapatel4725@gmail.com</h4>
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
+      <div class="column">
+          <div class="team-1">
+              <div class="team-img">
+                  <img src="assets/images/purvampic.jpg" alt="Team Image">
+              </div>
+              <div class="team-content">
+                  <h2>Purvam Patel</h2>
+                  <h3>Networking and IT Security</h3>
+                  <p>
+                    Passionate student pursuing Networking & IT Security at Ontario Tech, dedicated to merging business and technology realms.
+                  </p>
+                  <h4>purvampatel007@gmail.com</h4>
+              </div>
+          </div>
+      </div>
+      <div class="column">
+          <div class="team-1">
+              <div class="team-img">
+                  <img src="assets/images/chinmayapic.jpg" alt="Team Image">
+              </div>
+              <div class="team-content">
+                  <h2>Chinmaya Ramani</h2>
+                  <h3>Tech Management</h3>
+                  <p>Enthusiastic second-year Tech Management student passionate about tech, programming, web scripting, and embracing endless possibilities.
+                  </p>
+                  <h4>chinmayaramani@gmail.com</h4>
+              </div>
+          </div>
+      </div>
+      <div class="column">
+          <div class="team-1">
+              <div class="team-img">
+                  <img src="assets/images/saakethpic.jpg" alt="Team Image">
+              </div>
+              <div class="team-content">
+                  <h2>Saaketh Potluri </h2>
+                  <h3>Tech Management</h3>
+                  <p>
+                    Second-year Tech Management student at Ontario Tech passionate about coding, tackling challenges, sports enthusiast aiming to contribute to tech.</p>
+                  <h4>saakethpotluri@gmail.com</h4>
+              </div>
+          </div>
+      </div>
+  </div> 
 </div>
 
-<% include bottom_nav.ejs %>
-<% include footer.ejs %>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
+<style>
+  /**********************************/
+/********** General CSS ***********/
+/**********************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #454545;
+    font-weight: 300;
+    background: #ffffff;
+}
+
+a {
+    color: #333333;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #454545;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #008080;
+    font-weight: 700;
+    
+}
+
+h1 {
+    font-weight: 900;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/**********************************/
+/***** Layout & Section Title *****/
+/**********************************/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .column {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 5px;
+    left: calc(50% - 25px);
+    background: #353535;
+}
+
+.section-title h1 {
+    color: #353535;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 767.98px) {
+    .section-title h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+}
+
+@media(max-width: 567.98px) {
+    .section-title h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+/**********************************/
+/********** Team #1 Style *********/
+/**********************************/
+.team-1 {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.team-1 .team-img {
+    overflow: hidden;
+}
+
+.team-1 .team-img img {
+    width: 100%;
+    height: auto;
+    transition: all .3s;
+}
+
+.team-1:hover .team-img img {
+    transform: scale(1.2);
+}
+
+.team-1 .team-content {
+    padding: 20px;
+}
+
+.team-1 .team-content h2 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.team-1 .team-content h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.team-1 .team-content h4 {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.team-1 .team-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+</style>
