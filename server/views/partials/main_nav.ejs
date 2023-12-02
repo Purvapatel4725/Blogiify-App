@@ -6,47 +6,46 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto"> <!-- Changed ms-auto to mx-auto for centering -->
+      <ul class="navbar-nav me-auto"> <!-- Changed ms-auto to me-auto for alignment -->
         <li class="nav-item">
           <% if(title=="Home" ) { %>
             <a class="nav-link active hoverable" href="/">
-              <% } else { %>
-                <a class="nav-link hoverable" href="/">
-                  <% } %>
-                    Home
-                </a>
-                <li class="nav-item">
-                  <% if(title=="Blogs" ) { %>
-                    <a class="nav-link active hoverable" href="/blog">
-                      <% } else { %>
-                        <a class="nav-link hoverable" href="/blog">
-                          <% } %>
-                            Blogs
-                        </a>
-                </li>
+          <% } else { %>
+            <a class="nav-link hoverable" href="/">
+          <% } %>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <% if(title=="Blogs" ) { %>
+            <a class="nav-link active hoverable" href="/blog">
+          <% } else { %>
+            <a class="nav-link hoverable" href="/blog">
+          <% } %>
+            Blogs
+          </a>
         </li>
         <li class="nav-item">
           <% if(title=="about" ) { %>
             <a class="nav-link active hoverable" href="/about">
-              <% } else { %>
-                <a class="nav-link hoverable" href="/about">
-                  <% } %>
-                    About us
-                </a>
+          <% } else { %>
+            <a class="nav-link hoverable" href="/about">
+          <% } %>
+            About us
+          </a>
         </li>
         <% if(typeof displayName=='string' && displayName) { %>
           <li class="nav-item">
             <a href="/logout" class="nav-link hoverable">
               Logout</a>
           </li>
-          <% } else { %>
-            <li class="nav-item">
-              <a href="/login" class="nav-link hoverable">
-                Login</a>
-            </li>
-            <% } %>
+        <% } else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link hoverable">
+              Login</a>
+          </li>
+        <% } %>
       </ul>
-      
     </div>
     <ul class="navbar-nav ms-auto">
       <li class="navbar-text">
@@ -56,65 +55,4 @@
       </li>
     </ul>
   </div>
-  
 </nav>
-
-<style>
-  /* Navbar styles */
-  .navbar {
-    text-align: center !important;
-    float: none;
-    display: inline-block;
-    background-color: #008080; /* Background color for the navbar */
-    color: aqua; /* Text color for the navbar */
-    width: 100%; /* Spanning full width */
-  }
-
-  .navbar li {
-    margin-left: 3em;
-    margin-right: 3em;
-    display: inline-block; /* Center the content */
-  }
-
-  .navbar a {
-    transition: .5s color ease-in-out;
-    display: inline-block;
-    backface-visibility: hidden;
-    vertical-align: middle;
-    position: relative;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transform: translateZ(0);
-    transition-duration: .3s;
-    transition-property: transform;
-    color: white;
-  }
-
-  .navbar a:before {
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
-    content: '';
-    top: 100%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    opacity: 0;
-    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-    transition-duration: 0.3s;
-    transition-property: transform, opacity;
-  }
-
-  .navbar a:hover,
-  .navbar a:active,
-  .navbar a:focus {
-    transform: translateY(-5px);
-  }
-
-  .navbar a:hover:before,
-  .navbar a:active:before,
-  .navbar a:focus:before {
-    opacity: 1;
-    transform: translateY(-5px);
-  }
-</style>
