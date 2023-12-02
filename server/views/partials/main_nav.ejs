@@ -1,12 +1,18 @@
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar" style="background-color: #008080;">
   <div class="container-fluid text-center">
 
+    <!-- Navbar Toggler Button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Navbar Content -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto"> <!-- Changed ms-auto to me-auto for alignment -->
+        
+        <!-- Home Link -->
         <li class="nav-item">
           <% if(title=="Home" ) { %>
             <a class="nav-link active hoverable" href="/">
@@ -16,6 +22,8 @@
             Home
           </a>
         </li>
+
+        <!-- Blogs Link -->
         <li class="nav-item">
           <% if(title=="Blogs" ) { %>
             <a class="nav-link active hoverable" href="/blog">
@@ -25,6 +33,8 @@
             Blogs
           </a>
         </li>
+
+        <!-- About Us Link -->
         <li class="nav-item">
           <% if(title=="about" ) { %>
             <a class="nav-link active hoverable" href="/about">
@@ -34,6 +44,8 @@
             About us
           </a>
         </li>
+
+        <!-- Login/Logout Link (Based on User Authentication) -->
         <% if(typeof displayName=='string' && displayName) { %>
           <li class="nav-item">
             <a href="/logout" class="nav-link hoverable">
@@ -47,6 +59,8 @@
         <% } %>
       </ul>
     </div>
+
+    <!-- Display User Welcome (if authenticated) -->
     <ul class="navbar-nav ms-auto">
       <li class="navbar-text">
         <% if(typeof displayName=='string' && displayName) { %>
@@ -56,3 +70,4 @@
     </ul>
   </div>
 </nav>
+<!-- End of Navigation Bar -->
