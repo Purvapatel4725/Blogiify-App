@@ -9,7 +9,9 @@
                 <div class="card-body">
                     <h1 class="h4 mb-3 text-center"><strong>Add Blog Post</strong></h1>
 
+                    <!-- Blog Post Form -->
                     <form class="form" method="POST" action="/blog/add"> 
+                        <!-- Title Input Field -->
                         <div class="mb-3">
                             <label for="titleTextField" class="form-label"><strong>Title</strong></label>
                             <input type="text" class="form-control"
@@ -18,6 +20,7 @@
                             name="title" required>
                         </div>
 
+                        <!-- Content Textarea -->
                         <div class="mb-3">
                             <label for="contentTextArea" class="form-label"><strong>Content</strong></label>
                             <textarea type="text" class="form-control" rows="7"
@@ -26,6 +29,7 @@
                             name="content" required></textarea>
                         </div>
 
+                        <!-- Submit and Cancel Buttons -->
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-block" type="submit" style="background-color: #008080;">
                                 <i class="fas fa-edit"></i> Submit</button>

@@ -1,28 +1,32 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 
+<!-- Main content -->
 <main class="container">
     <div class="row">
         <div class="offset-md-2 col-md-8 text-center">
             <h1 class="mb-4 mt-3"><i class="fa-solid fa-comment-dots"></i> Blogs</h1>
             
+            <!-- Display "Add Blog" button if the user is logged in -->
             <% if(typeof displayName=='string' && displayName) { %>
                 <a href="/blog/add" class="btn btn-primary mt-3" role="button">
                     <i class="fa-solid fa-pen fa-shake"></i> Add Blog
                 </a> 
             <% } %>
-
         </div>
     </div>
 
+    <!-- Display blog posts -->
     <div class="row mt-1 p-5">
         <div class="offset-md-1 col-md-10">
             <% for(let count=0; count<blogPosts.length; count++) { %> 
                 <div class="card mb-3">
                     <div class="card-body">
+                        <!-- Display blog post title and content -->
                         <h5 class="card-title"><%= blogPosts[count].title %></h5>
                         <p class="card-text"><%= blogPosts[count].content %></p>
                         
+                        <!-- Display "Edit" and "Delete" buttons if the user is logged in -->
                         <% if(typeof displayName=='string' && displayName) { %>
                             <a href="/blog/edit/<%= blogPosts[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit
@@ -32,7 +36,6 @@
                                 <i class="fas fa-trash-alt"></i> Delete
                             </a>
                         <% } else { } %>
-                        
                     </div>
                 </div>
             <% } %>

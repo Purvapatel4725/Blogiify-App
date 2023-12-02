@@ -2,14 +2,16 @@
 <%- include ../partials/main_nav.ejs %>
 
 <!-- Content for the Edit page -->
-<div class="container p-5" ; color: white;">
+<div class="container p-5" style="color: white;">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <div class="card border-0 shadow">
                 <div class="card-body">
                     <h1 class="h4 mb-3 text-center"><strong>Edit Blog</strong></h1>
 
+                    <!-- Form for Editing Blog Post -->
                     <form class="form" method="POST" action="/blog/edit/<%= Blog._id %>"> 
+                        <!-- Title Input Field -->
                         <div class="mb-3">
                             <label for="titleTextField" class="form-label"><strong>Title</strong></label>
                             <input type="text" class="form-control"
@@ -20,6 +22,7 @@
                             required>
                         </div>
 
+                        <!-- Content Textarea -->
                         <div class="mb-3">
                             <label for="contentTextArea" class="form-label"><strong>Content</strong></label>
                             <textarea class="form-control" rows="7"
@@ -29,6 +32,7 @@
                             required><%= Blog.content %></textarea>
                         </div>
 
+                        <!-- Update and Cancel Buttons -->
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-block" type="submit" style="background-color: #008080;">
                                 <i class="fas fa-edit"></i> Update</button>
