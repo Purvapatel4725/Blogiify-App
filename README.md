@@ -25,3 +25,5 @@ Bootstrap 5 Navigation Bars (no date) www.w3schools.com. Available at: https://w
 Logo Maker & Brand Builder | Logo.com. (n.d.). Logo.com. https://logo.com/
 
 Logo Maker & Brand Builder for Navigation bar | Canva.com. Available at: https://www.canva.com/
+
+Project Part-2 Presentation template | slidesgo.com. Available at: https://slidesgo.com/
