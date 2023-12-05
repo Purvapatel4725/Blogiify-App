@@ -7,7 +7,7 @@
   </div>
   <div class="row">
       <div class="column">
-          <div class="team-1">
+          <div class="TeamM">
               <div class="team-img">
                   <img src="assets/images/purvapic.jpg" alt="Team Image">
               </div>
@@ -21,7 +21,7 @@
           </div>
       </div>
       <div class="column">
-          <div class="team-1">
+          <div class="TeamM">
               <div class="team-img">
                   <img src="assets/images/purvampic.jpg" alt="Team Image">
               </div>
@@ -36,7 +36,7 @@
           </div>
       </div>
       <div class="column">
-          <div class="team-1">
+          <div class="TeamM">
               <div class="team-img">
                   <img src="assets/images/chinmayapic.jpg" alt="Team Image">
               </div>
@@ -50,7 +50,7 @@
           </div>
       </div>
       <div class="column">
-          <div class="team-1">
+          <div class="TeamM">
               <div class="team-img">
                   <img src="assets/images/saakethpic.jpg" alt="Team Image">
               </div>
@@ -252,16 +252,16 @@ img {
     }
 }
 
-.team-1 {
+.TeamM {
     margin-bottom: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.team-1 .team-img {
+.TeamM .team-img {
     overflow: hidden;
 }
 
-.team-1 .team-img img {
+.TeamM .team-img img {
     width: 100%;
     height: 250px; /* Set a fixed height for uniformity */
     object-fit: cover; /* Maintain aspect ratio */
@@ -269,26 +269,26 @@ img {
 }
 
 
-.team-1:hover .team-img img {
+.TeamM:hover .team-img img {
     transform: scale(1.2);
 }
 
-.team-1 .team-content {
+.TeamM .team-content {
     padding: 20px;
 }
 
-.team-1 .team-content h2 {
+.TeamM .team-content h2 {
     font-size: 25px;
     font-weight: 400;
     letter-spacing: 2px;
 }
 
-.team-1 .team-content h3 {
+.TeamM .team-content h3 {
     font-size: 16px;
     font-weight: 300;
 }
 
-.team-1 .team-content h4 {
+.TeamM .team-content h4 {
     font-size: 16px;
     font-weight: 300;
     font-style: italic;
@@ -296,10 +296,17 @@ img {
     margin-bottom: 25px;
 }
 
-.team-1 .team-content p {
+.TeamM .team-content p {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
 }
 
+@media (max-width: 767.98px) {
+    .TeamM .team-img img {
+        height: 600px; /* Reset the height to auto */
+        max-height: 400px; /* Set a maximum height */
+    }
+}
 </style>
+
