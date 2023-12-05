@@ -69,11 +69,15 @@
 
 
 body {
-  font-family: 'Times New Roman', serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #000000;
+}
+
+html{
+  font-family: sans-serif;
 }
 
 .container{

@@ -19,7 +19,7 @@
           <% } else { %>
             <a class="nav-link hoverable" href="/">
           <% } %>
-            Home
+          <i class="fa-sharp fa-solid fa-house"></i>  Home
           </a>
         </li>
 
@@ -30,7 +30,7 @@
           <% } else { %>
             <a class="nav-link hoverable" href="/blog">
           <% } %>
-            Blogs
+          <i class="fa-sharp fa-solid fa-pen-nib"></i>  Blogs
           </a>
         </li>
 
@@ -41,7 +41,7 @@
           <% } else { %>
             <a class="nav-link hoverable" href="/about">
           <% } %>
-            About us
+          <i class="fa-sharp fa-solid fa-address-card"></i>  About us
           </a>
         </li>
 
@@ -49,12 +49,12 @@
         <% if(typeof displayName=='string' && displayName) { %>
           <li class="nav-item">
             <a href="/logout" class="nav-link hoverable">
-              Logout</a>
+              <i class="fa-sharp fa-solid fa-right-from-bracket"></i>  Logout</a>
           </li>
         <% } else { %>
           <li class="nav-item">
             <a href="/login" class="nav-link hoverable">
-              Login</a>
+              <i class="fa-sharp fa-solid fa-right-to-bracket"></i>  Login</a>
           </li>
         <% } %>
       </ul>
@@ -71,3 +71,21 @@
   </div>
 </nav>
 <!-- End of Navigation Bar -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const welcomeText = document.querySelector(".navbar-text");
+
+    navbarToggler.addEventListener("click", function() {
+      if (welcomeText.style.display !== "none") {
+        welcomeText.style.display = "none";
+      } else {
+        welcomeText.style.display = "block";
+      }
+    });
+  });
+</script>

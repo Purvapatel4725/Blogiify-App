@@ -223,16 +223,16 @@ img {
 }
 
 .section-title::after {
-    position: absolute;
-    content: "";
-    width: 50px;
+    content: ""; /* Remove the position and width properties */
+    display: block; /* Ensures the content appears as a block */
     height: 5px;
-    left: calc(50% - 25px);
-    background: #353535;
+    background: #008080;
+    margin-top: 15px; /* Adjust the margin to control space between title and line */
 }
 
+
 .section-title h1 {
-    color: #353535;
+    color: #008080;
     font-size: 50px;
     letter-spacing: 5px;
     margin-bottom: 5px;
@@ -252,11 +252,6 @@ img {
     }
 }
 
-
-
-/**********************************/
-/********** Team #1 Style *********/
-/**********************************/
 .team-1 {
     margin-bottom: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -268,9 +263,11 @@ img {
 
 .team-1 .team-img img {
     width: 100%;
-    height: auto;
+    height: 250px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio */
     transition: all .3s;
 }
+
 
 .team-1:hover .team-img img {
     transform: scale(1.2);
