@@ -8,9 +8,14 @@
     <div class="col-12 text-center">
       <h1 class="display-4 fw-bold"><i class="fas fa-quote-left fa-shake"></i> Blogiify <i class="fas fa-quote-right fa-shake"></i></h1>
       <!-- Reduced margin for the lead paragraph -->
-      <p class="lead mb-3">Stop Thinking, Start Writing!</p>
+      <div class="lead mb-3">
+        <p class="lead-text">
+          <span id="stopThinking">Stop Thinking...</span><span id="startWriting" style="font-weight: bold; display: inline;"></span>
+        </p>
+      </div>
     </div>
   </div>
+  
 
   <!-- Main section -->
   <section class="mt-3 mb-5">
@@ -38,3 +43,30 @@
 
 <% include partials/bottom_nav.ejs %>
 <% include partials/footer.ejs %>
+
+
+<script>
+  function typeText() {
+    const startWritingElement = document.getElementById('startWriting');
+    const textToType = " Start Writing!";
+    let index = 0;
+
+    function typeNextCharacter() {
+      if (index < textToType.length) {
+        startWritingElement.textContent += textToType.charAt(index);
+        index++;
+
+        setTimeout(typeNextCharacter, 100); // Adjust typing speed here (milliseconds)
+      }
+    }
+
+    typeNextCharacter(); // Start typing immediately
+
+    setTimeout(() => {
+      startWritingElement.textContent = ''; // Clear the text after typing once
+      setTimeout(typeText, 3000); // Repeat the typing after a delay (adjust interval here - milliseconds)
+    }, textToType.length * 100 + 2000); // Adjust the time before the text clears
+  }
+
+  window.addEventListener('load', typeText);
+</script>
