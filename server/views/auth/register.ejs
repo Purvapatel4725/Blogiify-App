@@ -1,7 +1,7 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 
-<main class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh; background: linear-gradient(to bottom, #f5f5f5, white);">
+<main class="container-fluid d-flex align-items-center justify-content-center mb-5" style="height: 100vh; background: linear-gradient(to bottom, #f5f5f5, white);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4 d-flex align-items-center justify-content-center mb-4"> <!-- Adjusted column and added margins -->
@@ -11,7 +11,7 @@
             <div class="col-md-1 d-none d-md-block"> <!-- Added a column for the line -->
                 <hr class="vertical-line">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-5">
                 <!-- Registration box on the right -->
                 <div class="card mt-1 shadow">
                     <div class="card-body p-4">
@@ -51,3 +51,26 @@
 
 <%- include ../partials/bottom_nav.ejs %>
 <%- include ../partials/footer.ejs %>
+
+
+
+<script>
+    // Function to hide the logo on mobile screens
+    function hideLogoOnMobile() {
+      const logo = document.querySelector('.img-fluid'); // Select the logo element
+  
+      // Check if the screen width is less than or equal to 767px (typical mobile screen size)
+      if (window.innerWidth <= 767) {
+        logo.style.display = 'none'; // Hide the logo
+      } else {
+        logo.style.display = 'block'; // Show the logo for larger screens
+      }
+    }
+  
+    // Initial call to hide the logo based on the screen size on page load
+    window.addEventListener('load', hideLogoOnMobile);
+  
+    // Listener for window resize events to dynamically update logo visibility
+    window.addEventListener('resize', hideLogoOnMobile);
+  </script>
+  
