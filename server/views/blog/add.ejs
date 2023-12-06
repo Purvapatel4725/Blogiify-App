@@ -19,7 +19,7 @@
                             placeholder="Enter the Blog Post Title"
                             maxlength="60"
                             name="title" required>
-                            <p id="charCount" style="font-size: 12px; color: #6c757d; margin-top: 5px;">0 characters out of 60</p>
+                            <p id="charCount" style="font-size: 12px; color: #6c757d; margin-top: 5px;">0/60</p>
                         </div>
 
                         <!-- Content Textarea -->
@@ -58,7 +58,7 @@
 
         titleTextField.addEventListener("input", function() {
             const currentLength = titleTextField.value.length;
-            charCountDisplay.textContent = `${currentLength} characters out of 60`;
+            charCountDisplay.textContent = `${currentLength}/60`;
         });
     });
 </script>

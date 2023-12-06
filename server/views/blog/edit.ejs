@@ -21,7 +21,7 @@
                             value="<%= Blog.title %>"
                             maxlength="60"
                             required>
-                            <p id="charCount" style="font-size: 12px; color: #6c757d; margin-top: 5px;">0 characters out of 60</p>
+                            <p id="charCount" style="font-size: 12px; color: #6c757d; margin-top: 5px;">0/60</p>
                         </div>
 
                         <!-- Content Textarea -->
@@ -58,9 +58,15 @@
         const titleTextField = document.getElementById("titleTextField");
         const charCountDisplay = document.getElementById("charCount");
 
-        titleTextField.addEventListener("input", function() {
+        function updateCharCount() {
             const currentLength = titleTextField.value.length;
-            charCountDisplay.textContent = `${currentLength} characters out of 60`;
-        });
+            charCountDisplay.textContent = `${currentLength}/60`;
+        }
+
+        // Calculate and display initial character count
+        updateCharCount();
+
+        // Update character count on input
+        titleTextField.addEventListener("input", updateCharCount);
     });
 </script>
