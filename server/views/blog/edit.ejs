@@ -51,22 +51,3 @@
 
 <%- include ../partials/bottom_nav.ejs %>  
 <%- include ../partials/footer.ejs %>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const titleTextField = document.getElementById("titleTextField");
-        const charCountDisplay = document.getElementById("charCount");
-
-        function updateCharCount() {
-            const currentLength = titleTextField.value.length;
-            charCountDisplay.textContent = `${currentLength}/60`;
-        }
-
-        // Calculate and display initial character count
-        updateCharCount();
-
-        // Update character count on input
-        titleTextField.addEventListener("input", updateCharCount);
-    });
-</script>

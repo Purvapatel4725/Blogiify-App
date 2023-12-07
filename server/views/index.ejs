@@ -45,28 +45,3 @@
 <% include partials/footer.ejs %>
 
 
-<script>
-  function typeText() {
-    const startWritingElement = document.getElementById('startWriting');
-    const textToType = " Start Writing!";
-    let index = 0;
-
-    function typeNextCharacter() {
-      if (index < textToType.length) {
-        startWritingElement.textContent += textToType.charAt(index);
-        index++;
-
-        setTimeout(typeNextCharacter, 100); // Adjust typing speed here (milliseconds)
-      }
-    }
-
-    typeNextCharacter(); // Start typing immediately
-
-    setTimeout(() => {
-      startWritingElement.textContent = ''; // Clear the text after typing once
-      setTimeout(typeText, 3000); // Repeat the typing after a delay (adjust interval here - milliseconds)
-    }, textToType.length * 100 + 2000); // Adjust the time before the text clears
-  }
-
-  window.addEventListener('load', typeText);
-</script>

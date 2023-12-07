@@ -48,17 +48,3 @@
 
 <%- include ../partials/bottom_nav.ejs %>  
 <%- include ../partials/footer.ejs %>
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const titleTextField = document.getElementById("titleTextField");
-        const charCountDisplay = document.getElementById("charCount");
-
-        titleTextField.addEventListener("input", function() {
-            const currentLength = titleTextField.value.length;
-            charCountDisplay.textContent = `${currentLength}/60`;
-        });
-    });
-</script>
