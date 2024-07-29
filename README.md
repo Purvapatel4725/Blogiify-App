@@ -1,4 +1,4 @@
-# Group 12 - Final Project (All Parts Included)
+# Group 12 - Final Project 
 
 Purva Patel - 100886734
 
