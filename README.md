@@ -1,14 +1,10 @@
 # Group 12 - Final Project 
 
-Purva Patel - 100886734
-
-Purvam Patel - 100863366
-
-Chinmaya Ramani - 100872828
-
-Saaketh Potluri - 100876538
-
-Shalin Vaidya - 100888421
+Purva Patel
+Purvam Patel
+Chinmaya Ramani
+Saaketh Potluri
+Shalin Vaidya 
 
 # References:
 
