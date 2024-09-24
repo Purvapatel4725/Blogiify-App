@@ -1,9 +1,13 @@
 # Group 12 - Final Project 
 
 Purva Patel
+
 Purvam Patel
+
 Chinmaya Ramani
+
 Saaketh Potluri
+
 Shalin Vaidya 
 
 # References:
